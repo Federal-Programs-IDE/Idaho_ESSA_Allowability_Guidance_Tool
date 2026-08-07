@@ -1,0 +1,229 @@
+Grant,Expense Type,Status,Guidance
+All,Field Trips,Conditional,"Must be part of teacher's lesson plan and support instructional objectives. Cost must be reasonable and documented. Not for social, entertainment, or recreational purposes. Not for amusement parks, theme parks, or arcades"
+All,Food & Beverages - Professional Development,Conditional,"Working lunches allowable only if: (1) time constraint requires it (e.g., long distance travel prevents separate meal), (2) agenda portion during lunch is substantive and integral to meeting, (3) cost is reasonable, (4) documented as necessary. Meals otherwise should be separate from meeting time"
+All,Food & Beverages - Parent/Family Engagement Events,Conditional,Light refreshments allowed to encourage participation. Full meals not allowed unless grant specifically authorizes. Must be necessary to accomplish grant objectives
+All,Food & Beverages - Meetings & Conferences,Conditional,"If meals are provided during meetings, must meet same standard as PD: documented necessity, time constraint, substantive agenda during meal time, reasonable cost"
+All,Gifts & Promotional Items,Not Allowable,"No gift cards, T-shirts, tote bags, promotional mugs, imprinted pens, or items that appear to be gifts to staff or participants"
+All,Door Prizes & Entertainment Items,Not Allowable,"Movie tickets, gift certificates, passes to amusement parks, theme parks, or arcades"
+All,Ceremonies & Celebrations,Not Allowable,"Banquets, service awards, employee recognition ceremonies, or similar celebrations"
+All,Cleaning & Sanitizing Supplies,Not Allowable,Personal hygiene items and sanitation supplies are not allowable
+All,Construction & Renovation,Not Allowable,"Construction, remodeling, repair, or renovation of school facilities"
+All,Vehicles & Transportation Equipment,Not Allowable,Purchase of buses or actual vehicles (unless Title I-C Migrant transportation specifically authorizes)
+All,Personal Use Items,Not Allowable,"Luggage, coffee cups, office décor, personal calendars, any items for personal use even if for business travel"
+All,Alcoholic Beverages,Not Allowable,
+All,Conflict of Interest Purchases,Not Allowable,"Any purchase that poses a conflict of interest, real or perceived"
+All,Airline Upgrades,Not Allowable,Premium cabin seating
+All,TSA Pre-Check,Not Allowable,Convenience travel fees
+All,Hotel Incidental Costs (Personal),Not Allowable,"Room service, movies, personal items at hotel"
+All,Long Distance Personal Phone Calls,Not Allowable,
+All,Travel & Rental Car Insurance,Not Allowable,
+All,Land Purchase,Not Allowable,Land purchase and improvements to land
+All,Memberships - Civic/Lobbying,Not Allowable,"Memberships in civic, social, or lobbying organizations"
+All,Fundraising Costs,Not Allowable,"Costs of organized fundraising activities, solicitation of gifts, banquets associated with fundraising"
+All,Gratuities & Tips,Not Allowable,
+All,Parking Tickets,Not Allowable,
+All,Early-Bird Hotel Check-In Fees,Not Allowable,Convenience fees not essential to meeting attendance
+All,Interest Paid,Not Allowable,Interest charges cannot be charged retroactively to current grant period
+All,Professional Liability Insurance (Individual),Not Allowable,Individual professional liability insurance
+All,Professional Licenses (Individual),Not Allowable,"Individual professional licenses (CPA, SLP, RN, etc.)"
+All,Unallowable Content Distribution,Not Allowable,"Develop, distribute, or operate materials/programs/instruction directed at youth that promote activities prohibited by law. No legally obscene materials to minors. No sex education unless age appropriate. No contraceptive distribution programs. No curriculum endorsing non-mainstream science"
+Title I-A,Program Administrator/Grant Manager/Coordinator,Conditional,"Title I portion of salary only. If split duties with non-Title I responsibilities, allocate proportionately. Entire salary allowable only if 100% Title I responsibility"
+Title I-A,Data Coordinator,Allowable,
+Title I-A,Homeless Liaison,Allowable,
+Title I-A,Title I Teacher - Reading or Math Specialist,Allowable,For staff assigned primarily to support Title I students
+Title I-A,Instructional Coach,Allowable,Coaching focused on improving instruction for Title I students
+Title I-A,Preschool/Early Childhood Education Staff,Allowable,
+Title I-A,Summer/Before-After School/Tutoring Staff,Allowable,
+Title I-A,Teacher Time - Non-Title I School,Not Allowable,Cannot pay Title I teachers for work in non-Title I schools or with non-Title I students
+Title I-A,Substitute Teachers,,Title I is supplemental; cannot pay substitutes for all teachers. Substitutes only if specified in school plan
+Title I-A,Instructional Paraprofessional - Title I,Allowable,
+Title I-A,Paraprofessional - Non-Title I Students,Not Allowable,Cannot pay for work with non-Title I students
+Title I-A,Parent & Family Engagement Liaison,Allowable,
+Title I-A,"Benefits (Insurance, PERSI, etc.)",Allowable,Fringe benefits for allowable Title I staff
+Title I-A,Tuition Fees for Employees,Allowable,Professional development tuition
+Title I-A,Volunteer Contribution Accounts,Not Allowable,
+Title I-A,Stipends - Program Administration,Allowable,
+Title I-A,Stipends - Professional Development,Allowable,
+Title I-A,Stipends - Data & Improvement Planning,Allowable,
+Title I-A,Stipends - Parent & Family Engagement,Allowable,
+Title I-A,Stipends - Already Compensated Work,Not Allowable,Cannot pay stipends for work already part of regular contractual duties
+Title I-A,Benefits for Stipends,Conditional,Limited to FICA and PERSI. Benefits covered through regular contract cannot be double-funded
+Title I-A,Professional Development - Presenter/Trainer,Allowable,Cost of on-site presenter or trainer
+Title I-A,Professional Development - Conference Registration,Allowable,Conference fees for staff
+Title I-A,Professional Development - Training Materials,Allowable,"Books, materials, online courses"
+Title I-A,Professional Development - Accreditation Fees,Not Allowable,Accreditation is state requirement; cannot be funded with Title I
+Title I-A,Professional Development - Assessment Fees (State-Required),Not Allowable,State-mandated assessment fees are not allowable
+Title I-A,Professional Development - Background/Fingerprint Fees,Not Allowable,
+Title I-A,Curriculum Supplies,Not Allowable,Regular core classroom supplies for students are not allowable
+Title I-A,Books & Instructional Materials,Allowable,For Title I students
+Title I-A,Basic & Emergency Supplies,Allowable,"Notebooks, backpacks, school supplies for Title I students"
+Title I-A,Clothing/Shoes (Dress Code),Allowable,When necessary to meet school dress requirement
+Title I-A,Computers & iPads,Not Allowable,Capital objects/technology equipment
+Title I-A,Software,Not Allowable,Capital technology
+Title I-A,Extended Learning Time,Allowable,"Before/after school, Saturday classes, summer programs to support Title I students"
+Title I-A,Tutoring Services,Allowable,Especially in shelters or other locations where homeless students reside
+Title I-A,Mentoring Programs,Allowable,
+Title I-A,Counseling Services,Allowable,Including domestic violence counseling and violence prevention counseling
+Title I-A,Intervention Programs,Allowable,
+Title I-A,Homework Assistance,Allowable,
+Title I-A,Medical & Dental Services,Allowable,For Title I students
+Title I-A,Eyeglasses & Hearing Aids,Allowable,
+Title I-A,Early Childhood Education Programs,Allowable,Discretionary funding for eligible children
+Title I-A,Services for Homeless Children,Allowable,Homeless set-aside services and transportation to school of origin
+Title I-A,Transportation - Foster Care,Allowable,Additional costs to transport foster care children to school of origin
+Title I-A,Equitable Services - Private School,Allowable,Proportional amount based on private school enrollment
+Title I-A,English Learner Services,Allowable,Curriculum and instructional materials to identify and serve EL students
+Title I-A,Extended Learning for EL Students,Allowable,"Before/after school, weekend, summer programs for English learners"
+Title I-A,Parent & Family Engagement Activities,Allowable,Per required set-asides and authorized activities
+Title I-A,Professional Development - Parent Engagement,Allowable,Staff training on parent engagement strategies
+Title I-A,Community Organization Contracts,Allowable,Contract with nonprofits for engagement activities
+Title I-A,Home Visits - Staff,Allowable,"Pay classroom teachers, paraprofessionals, administrators to conduct home visits"
+Title I-A,Technology Support for Families,Allowable,Pay staff to help families with technological support
+Title I-A,Translation & Interpretation Services,Allowable,Language support for families
+Title I-A,Communication Apps,Allowable,Apps for communicating with families
+Title I-A,Family Engagement Curriculum,Allowable,Develop curriculum for parent conferences and engagement
+Title I-A,Make & Take Activities,Allowable,Purchase and assemble materials for student-family take-home activities
+Title I-A,Focus Groups & Surveys,Allowable,Conducting focus groups and developing family input surveys
+Title I-A,Expenditures in Non-Title I School,Not Allowable,"LEA-level activities may only use Title I-A funds in Title I schools, except for required set-asides"
+Title I-A,All Students in Targeted Assistance School,Not Allowable,"Funds must target eligible students, not all students"
+Title I-A SI,Any Activity Aligned to Improvement Plan,,Any activity determined by LEA (with SEA agreement) to help school meet improvement goals is allowable
+Title I-A SI,Expenses in Non-Improvement School,,Cannot use for schools not in school improvement status
+Title I-C,Migrant Coordinator/Director,Allowable,Staff focused on migrant student services
+Title I-C,Family Liaison,Allowable,
+Title I-C,Paraprofessional - Migrant,Allowable,
+Title I-C,Paraprofessional - Non-Migrant,Not Allowable,Cannot use for staff working with non-migrant students except through incidental inclusion (strict two-part test applies)
+Title I-C,Benefits - Migrant Staff,Allowable,"Insurance, PERSI, etc"
+Title I-C,Stipends - Migrant Activities,Allowable,
+Title I-C,Benefits for Stipends,Conditional,Limited to FICA and PERSI
+Title I-C,Tutoring - Migrant Students,Allowable,"Before/after school, summer programs for migrant-identified students"
+Title I-C,Instructional Services - Migrant,Allowable,Services specifically for migrant students
+Title I-C,Services - Non-Migrant Students,Not Allowable,Cannot serve students not identified as migrant except through incidental inclusion
+Title I-C,Professional Development,Allowable,Staff training on migrant student needs
+Title I-C,Counseling & Support Services,Allowable,Services to address barriers to learning for migrant students
+Title I-C,Educational Materials & Supplies,Allowable,"Books, materials, supplies for migrant students"
+Title I-C,Food - Refreshments/Meals,Allowable,Reasonable expenditures for refreshments or food provided to migrant students during instructional activities
+Title I-C,Transportation - Migrant Students,Allowable,Transportation for migrant students; may include dedicated vehicles
+Title I-C,Overnight Travel Costs,Allowable,Lodging for migrant students/families
+Title I-C,Expenses Not Serving Purpose,Not Allowable,Must serve migrant student needs
+Title I-C,Services for Non-Migrant Students,Not Allowable,Cannot use for students not identified as migrant except through incidental inclusion
+Title I-D Subpart 1,Services to N/D Students,Allowable,Educational services for children in local institutions for neglected or delinquent children
+Title I-D Subpart 1,Transition Services,Allowable,Assist transition from institutional setting to regular school
+Title I-D Subpart 1,Institutional Program Upgrade,Allowable,Serve all children and upgrade entire educational effort of institution
+Title I-D Subpart 2,Educational Programs - Alternative,Allowable,High-quality education programs preparing children/youth to complete high school
+Title I-D Subpart 2,Transition Services - Correctional,Allowable,Activities facilitating transition from correctional facilities
+Title I-D Subpart 2,Dropout Prevention Programs,Allowable,Programs for at-risk children and youth
+Title I-D Subpart 2,Coordination - Health & Social Services,Allowable,"Coordinate day care, healthcare, drug counseling, mental health services, etc"
+Title I-D Subpart 2,Programs - Unique Academic Needs,Allowable,"Special programs for at-risk children including remedial instruction, bilingual services, etc"
+Title I-D Subpart 2,Mentoring & Peer Mediation,Allowable,
+Title I-D Subpart 2,Program Administration/Coordination,Conditional,Reasonable and necessary if activities are consistent with grant purpose
+Title I-D Subpart 2,Transition Funds - Required,Conditional,Subpart 2 must reserve portion of funds to operate transition programs
+Title I-D,Salaries - Administrative/Instructional Staff,Allowable,Staff supporting at-risk student programs
+Title I-D,Professional Development,Allowable,"Training for staff in alternative education, dropout prevention, etc"
+Title I-D,Equipment,Allowable,Technology and equipment supporting at-risk students
+Title I-D,Services & Materials,Allowable,"Instructional materials, counseling, health services"
+Title I-D,Expenses Not Serving Purpose,Not Allowable,
+Title II-A,Teacher Salary - Regular Core,Not Allowable,Regular teacher salaries cannot be funded
+Title II-A,Teacher Salary - Supplemental,Allowable,Stipends for Title II-A activities; benefits limited to FICA and PERSI
+Title II-A,Instructional Coach,Allowable,Coach/mentor focused on teacher effectiveness
+Title II-A,Data Coach,Allowable,
+Title II-A,MTSS Coach,Allowable,
+Title II-A,Administrative Staff - Title II-A,Allowable,Costs associated with managing Title II-A program
+Title II-A,Principal Salary - Supplemental,Allowable,Title II-A portion of principal salary for instructional leadership
+Title II-A,Professional Development - Ongoing,Allowable,Cost of sustained PD for improving teacher effectiveness
+Title II-A,Professional Development - Conference,Allowable,Conference registration and attendance
+Title II-A,Professional Development - Materials,Allowable,"Books, online courses, training materials"
+Title II-A,Professional Development - Accreditation,Not Allowable,State-required accreditation is not allowable
+Title II-A,Professional Development - Assessment (State-Required),Not Allowable,State-mandated assessment fees
+Title II-A,Professional Development - Any Employee,Not Allowable,"PD for employees not teaching core curriculum (e.g., coach not teaching core, admin support)"
+Title II-A,Classroom Supplies - Core Curriculum,Not Allowable,Regular classroom supplies for students
+Title II-A,Computers & iPads,Not Allowable,Capital technology objects
+Title II-A,Software,Not Allowable,Capital technology
+Title II-A,Background Check Fees,Not Allowable,
+Title II-A,Fingerprinting Fees,Not Allowable,
+Title II-A,Food - Unrelated Activities,Not Allowable,Food for activities not funded with Title II-A
+Title II-A,Expenses Not Serving Title II-A Purpose,Not Allowable,
+Title II-A,Supplemental Required,Conditional,"Activities must not be required by federal, state, or local law and must not have been funded by state/local funds the prior year"
+Title III-A,EL Coordinator/Director,Allowable,Staff focused on English learner services
+Title III-A,EL Teachers,Allowable,Teachers providing language instruction
+Title III-A,Instructional Staff - EL Services,Allowable,"Paraprofessionals, aides supporting EL students"
+Title III-A,Professional Development - EL Teachers,Allowable,"High-quality PD for classroom teachers, specialists, ESL teachers"
+Title III-A,Professional Development - Administrator,Allowable,Training for school leaders on EL program implementation
+Title III-A,Language Instruction Materials,Allowable,Development and enhancement of language instruction programs
+Title III-A,Family Engagement Activities,Allowable,Strengthen and increase family participation in language programs
+Title III-A,Community Participation,Allowable,Promote family and community engagement in EL programs
+Title III-A,Identification & Assessment,Conditional,LEAs may not use Title III-A to meet civil rights obligations for EL identification and assessment (those are required)
+Title III-A,Language Assistance Program,Conditional,"LEAs may not use Title III-A to meet civil rights obligation to provide educationally sound, proven successful program"
+Title III-A,Staffing for Language Program,Conditional,"LEAs may not use Title III-A to meet civil rights obligation for trained, qualified staff"
+Title III-A,Equal Opportunity Participation,Conditional,LEAs may not use Title III-A to meet civil rights obligation to ensure meaningful EL participation in curriculum/activities
+Title III-A,EL Student Segregation,Conditional,LEAs may not use Title III-A to meet civil rights obligation to avoid unnecessary segregation
+Title III-A,IDEA Services,Conditional,LEAs may not use Title III-A to meet obligation for EL students with disabilities
+Title III-A Immigrant,Immigrant Coordinator,Allowable,"Staff focused on immigrant student recruitment, support"
+Title III-A Immigrant,Immigrant Students - Recruitment,Allowable,Identifying and enrolling eligible immigrant students
+Title III-A Immigrant,Staffing - Immigrant Services,Allowable,Qualified personnel for immigrant student programs
+Title III-A Immigrant,Instructional Materials - Immigrant,Allowable,Development and acquisition of materials for immigrant students
+Title III-A Immigrant,Translation - Documents,Not Allowable,Cannot use funds to translate documents required by law
+Title III-A Immigrant,Staff - Not Trained,Not Allowable,Cannot pay for insufficiently trained staff
+Title IV-A,Well-Rounded Education Activities,Allowable,"STEM, arts, foreign language, civics, health, physical education, environmental education"
+Title IV-A,Safe & Healthy Students Activities,Allowable,"Trauma-informed practices, mental health services, PBIS, MTSS, suicide prevention, bullying prevention"
+Title IV-A,Effective Technology Use,Allowable,"Blended learning, course delivery via technology, professional development for STEM/technology, devices/equipment for instruction"
+Title IV-A,School Counselor,Allowable,School-based mental health and academic support
+Title IV-A,School Resource Officer,Allowable,Support for safe school environment
+Title IV-A,Dropout Prevention,Allowable,
+Title IV-A,Assessment Fees,Allowable,Testing and evaluation for well-rounded education purposes
+Title IV-A,Salaries - Supplemental Staff,Allowable,Staff supporting Title IV-A activities
+Title IV-A,Professional Development,Allowable,Training for staff implementing Title IV-A activities
+Title IV-A,Instructional Materials,Allowable,Curriculum and materials for well-rounded education
+Title IV-A,Equipment & Technology,Allowable,"Devices, software, platforms supporting Title IV-A activities"
+Title IV-A,Expenses Not Serving Purpose,Not Allowable,
+Title IV-A,Supplemental Required,Conditional,"Must not be required by federal, state, or local law and not funded by state/local the prior year"
+Title IV-A,Funding Obligations,Conditional,"Districts with $30K+: minimum 20% for well-rounded education, 20% for safe/healthy students, portion for effective technology (at least some for STEM-focused)"
+Title V-B,Any Allowable Activity,Conditional,Addresses unique needs of rural districts; must be supplemental and not replace regular academic program
+Title IX-A,Tutoring & Supplemental Instruction,Allowable,"Services helping homeless children/youth enroll, attend, succeed"
+Title IX-A,Expedited Evaluations,Allowable,"Assess strengths, needs, interests of homeless students"
+Title IX-A,Professional Development - Educators,Allowable,Training for teachers and instructional support staff on serving homeless students
+Title IX-A,Medical & Health Services,Allowable,"Referrals to medical, dental, mental health, other health services"
+Title IX-A,Transportation - Excess Cost,Allowable,Funding excess cost of transportation not covered by federal/state/local funds to remain in school of origin
+Title IX-A,Early Childhood Programs,Allowable,Preschool programs for homeless children
+Title IX-A,Engagement & Retention Services,Allowable,"Activities to attract, engage, retain homeless children/youth"
+Title IX-A,Before/After School & Summer Programs,Allowable,"Mentoring, summer programs for homeless children/youth"
+Title IX-A,School Records - Tracking & Transfer,Allowable,Payment of fees/costs for obtaining and transferring student records
+Title IX-A,Parent Education & Training,Allowable,Education for parents/guardians on rights of homeless children/youth
+Title IX-A,Coordination & Collaboration,Allowable,Coordination between schools and agencies serving homeless youth
+Title IX-A,Violence Prevention & Counseling,Allowable,"Specialized instructional support, violence prevention, mental health referrals"
+Title IX-A,Extraordinary/Emergency Services,Allowable,Services enabling homeless children/youth to attend school
+Title IX-A,Supplies & Storage,Allowable,"Adaptations of space, supplies for storing materials, creating services space"
+Title IX-A,School Supplies,Allowable,"Providing needed school supplies, including for distribution at shelters"
+Title IX-A,Clothing & Shoes,Allowable,Clothing/shoes necessary for dress code compliance
+Title IX-A,Eyeglasses & Hearing Aids,Allowable,
+Title IX-A,Food - During Instruction,Allowable,Food to meet need during instructional time/activities
+Title IX-A,GED Support,Allowable,Cost of GED diploma for parents participating in Head Start
+Title IX-A,Graduation Fees & Items,Allowable,"Cap, gown, graduation fees"
+Title IX-A,Program Fees,Allowable,Student fees required to participate in general education program
+Title IX-A,Test Fees,Allowable,"AP, IB, SAT, ACT, college entrance exam fees"
+Title IX-A,Rental Assistance,Not Allowable,Housing costs
+Title IX-A,Housing Deposit,Not Allowable,
+Title IX-A,Expenses Not Serving Purpose,Not Allowable,Must serve homeless student needs
+Title IX-A,Services for Non-Homeless Students,Not Allowable,Cannot use for students not identified as homeless
+Equitable Services,Any Allowable Activity per Grant,Allowable,"Activities must align with corresponding federal program (I-A, II-A, IV-A, etc.) allowable activities"
+Equitable Services,Pay Private School Teacher,Allowable,Employee of LEA or contracted service to provide services to private school students
+Equitable Services,Private School Assessment,Not Allowable,Cannot pay private school for assessment services
+Equitable Services,Provide via Contractor,Allowable,Must meet state teacher standards. Contractor provisions funded with federal funds
+Equitable Services,Equipment & Materials,Allowable,Shared use equipment/materials; remain in LEA ownership
+Parent Engagement,Professional Development - Staff,Allowable,Training school personnel on parent engagement strategies
+Parent Engagement,Programs - Outreach to Parents,Allowable,"Activities reaching parents/families at home, community, school"
+Parent Engagement,Best Practices - Dissemination,Allowable,"Information on evidence-based parent engagement, especially for disadvantaged families"
+Parent Engagement,Community Organization Contracts,Allowable,"Nonprofits can provide engagement activities, professional development for staff, workshops/training for parents, collaboration on engagement strategies, outreach to seniors, technology training"
+Parent Engagement,Home Visits,Allowable,"Pay staff (teachers, paraprofessionals, administrators) to conduct home visits"
+Parent Engagement,Technology Support,Allowable,Help families with technological support and communication
+Parent Engagement,Translation & Interpretation,Allowable,Language support for family engagement
+Parent Engagement,Communication Apps,Allowable,Apps for school-family communication
+Parent Engagement,Family Engagement Curriculum,Allowable,"Develop curriculum for parent conferences, engagement planning"
+Parent Engagement,Grandparent Technology Training,Allowable,Training for grandparents on technology for school engagement
+Parent Engagement,Make & Take Kits,Allowable,Purchase and assemble materials for families to take home and use with students
+Parent Engagement,Family Nights - With Substance,Allowable,Family engagement events with meaningful content; light refreshments allowable per food guidance
+Parent Engagement,Achievement Improvement Training,Allowable,Training helping families work with students on achievement
+Parent Engagement,Targeted Workshops,Allowable,"Workshops for specific family situations (mothers-daughters, grandparents, single parents, etc.)"
+Parent Engagement,Focus Groups & Surveys,Allowable,"Conduct focus groups, develop surveys to gather family input"
+Parent Engagement,Travel/Conference for Parent Leaders,Allowable,"Registration, materials, reasonable expenses for parents attending conferences/trainings"
+Parent Engagement,Awards Banquet Food,Not Allowable,"Refreshments or meals at awards banquets, celebrations, assemblies"
+Parent Engagement,Full Meal Provision,Not Allowable,Full meals for parent engagement events (except Title I-C PAC exception)
