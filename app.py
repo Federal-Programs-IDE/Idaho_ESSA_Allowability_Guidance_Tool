@@ -12,4 +12,7 @@ st.set_page_config(layout="wide")
 with open("grant_lookup_tool.html", "r", encoding="utf-8") as f:
     html_code = f.read()
 
-components.html(html_code, height=900, scrolling=True)
+injected_html = html_content.replace("__EMBEDDINGS_DATA__", embeddings_data)
+
+# 4. Render
+components.html(injected_html, height=600)
