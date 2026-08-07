@@ -6,11 +6,12 @@ import streamlit.components.v1 as components
 with open("embeddings.json", "r") as f:
     embeddings_data = f.read()  # Raw JSON string
     
-# Load and display your exact HTML file
+# 2. Load and display your exact HTML file
 with open("grant_lookup_tool.html", "r", encoding="utf-8") as f:
     html_code = f.read()
 
-injected_html = html_code.replace("__EMBEDDINGS_DATA__", json.dumps(embeddings_data))
+# 3. Inject raw JSON string directly
+injected_html = html_code.replace("__EMBEDDINGS_DATA__", embeddings_data)
 
 # 4. Render
 components.html(injected_html, height=600)
