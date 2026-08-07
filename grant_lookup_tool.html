@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant Expense Guidance Lookup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #024d99 0%, #002742 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        select, input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        
+        select:focus, input:focus, textarea:focus {
+            outline: none;
+            border-color: #024d99;
+            box-shadow: 0 0 0 3px rgba(2, 77, 153, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #024d99 0%, #002742 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(2, 77, 153, 0.3);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .result.show {
+            display: block;
+        }
+        
+        .result-label {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .result-content {
+            color: #333;
+            font-size: 15px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+        
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .error.show {
+            display: block;
+        }
+        
+        .loading {
+            color: #024d99;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .loading.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grant Expense Guidance Lookup</h1>
+        
+        <div class="form-group">
+            <label for="grant">Select Title Grant</label>
+            <select id="grant">
+                <option value="">Select a grant</option>
+                <option value="Title I-A">Title I-A</option>
+                <option value="Title I-A SI">Title I-A SI</option>
+                <option value="Title I-C">Title I-C</option>
+                <option value="Title I-D Subpart 1">Title I-D Subpart 1</option>
+                <option value="Title I-D Subpart 2">Title I-D Subpart 2</option>
+                <option value="Title I-D">Title I-D</option>
+                <option value="Title II-A">Title II-A</option>
+                <option value="Title III-A">Title III-A</option>
+                <option value="Title III-A Immigrant">Title III-A Immigrant</option>
+                <option value="Title IV-A">Title IV-A</option>
+                <option value="Title V-B">Title V-B</option>
+                <option value="Title IX-A">Title IX-A</option>
+                <option value="Equitable Services">Equitable Services</option>
+                <option value="Parent Engagement">Parent Engagement</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="expense">Describe the expense</label>
+            <textarea id="expense" placeholder="e.g., doughnuts for staff meeting, professional development books, classroom supplies"></textarea>
+        </div>
+        
+        <button >Get Guidance</button>
+        
+        <div class="loading" id="loading">Loading model and analyzing...</div>
+        <div class="error" id="error"></div>
+        
+        <div class="result" id="result">
+            <div class="result-label">Guidance</div>
+            <div class="result-content" id="resultContent"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/js-csv@1.1.1/csv.min.js"></script>
+    <script type="module">
+    import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0';
+    
+    env.allowLocalModels = false;
+    env.allowRemoteModels = true;
+    
+    let data = [];
+    let expenseTypes = [];
+    let embeddings = [];
+    let extractor = null;
+    
+    // Load CSV
+    async function loadCSV() {
+        try {
+            const response = await fetch('https://isde.sharepoint.com/:x:/r/sites/FederalPrograms/Shared%20Documents/Grant%20Lookup%20Tool/allowable_use_mapping.csv?d=w2fb1a1305477432eac0553ee2abc9827&csf=1&web=1&e=bwOFGZ&download=1');
+            const text = await response.text();
+            const lines = text.trim().split('\n');
+            const headers = lines[0].split(',');
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(',');
+                data.push({
+                    grant: values[0],
+                    expenseType: values[1],
+                    status: values[2],
+                    guidance: values[3] || ''
+                });
+            }
+        } catch (err) {
+            console.error('Error loading CSV:', err);
+            showError('Error loading CSV: ' + err.message);
+        }
+    }
+    
+    // Load embeddings
+    async function loadEmbeddings() {
+        try {
+            const response = await fetch('https://isde.sharepoint.com/sites/FederalPrograms/Shared%20Documents/Grant%20Lookup%20Tool/embeddings.json?download=1');
+            const json = await response.json();
+            expenseTypes = json.expense_types;
+            embeddings = json.embeddings;
+        } catch (err) {
+            console.error('Error loading embeddings:', err);
+            showError('Could not load embeddings: ' + err.message);
+        }
+    }
+    
+    // Load model
+    async function loadModel() {
+        try {
+            extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+        } catch (err) {
+            console.error('Error loading model:', err);
+            showError('Could not load model');
+        }
+    }
+    
+    // Cosine similarity
+    function cosineSimilarity(a, b) {
+        let dotProduct = 0;
+        let normA = 0;
+        let normB = 0;
+        
+        for (let i = 0; i < a.length; i++) {
+            dotProduct += a[i] * b[i];
+            normA += a[i] * a[i];
+            normB += b[i] * b[i];
+        }
+        
+        normA = Math.sqrt(normA);
+        normB = Math.sqrt(normB);
+        
+        return dotProduct / (normA * normB);
+    }
+    
+    // Match expense
+    async function matchExpense(userInput) {
+        if (!extractor) {
+            await loadModel();
+        }
+        
+        const result = await extractor(userInput, { pooling: 'mean', normalize: true });
+        const userEmbedding = Array.from(result.data);
+        
+        const similarities = embeddings.map((emb, idx) => ({
+            index: idx,
+            expenseType: expenseTypes[idx],
+            similarity: cosineSimilarity(userEmbedding, emb)
+        }));
+        
+        similarities.sort((a, b) => b.similarity - a.similarity);
+        
+        return similarities.slice(0, 10).map(item => item.expenseType);
+    }
+    
+    // Get guidance
+    function getGuidance(grant, expenseTypes) {
+        const matchedRows = data.filter(row => {
+            if (grant === 'Title I-A SI' || grant === 'Title V-B') {
+                return row.grant === grant;
+            }
+            
+            return (row.grant === 'All' || row.grant === grant) && 
+                   expenseTypes.includes(row.expenseType);
+        });
+        
+        if (matchedRows.length === 0) {
+            return 'Sorry I didn\'t understand, please try again';
+        }
+        
+        return matchedRows.map(row => {
+            if (row.guidance) {
+                return `${row.guidance}: ${row.status}`;
+            }
+            return row.status;
+        }).join('\n\n');
+    }
+    
+    function showError(msg) {
+        const errorDiv = document.getElementById('error');
+        const resultDiv = document.getElementById('result');
+        const loadingDiv = document.getElementById('loading');
+        
+        errorDiv.textContent = msg;
+        errorDiv.classList.add('show');
+        resultDiv.classList.remove('show');
+        loadingDiv.classList.remove('show');
+    }
+    
+    window.lookupGuidance = async function() {
+        const grant = document.getElementById('grant').value.trim();
+        const expense = document.getElementById('expense').value.trim();
+        const errorDiv = document.getElementById('error');
+        const resultDiv = document.getElementById('result');
+        const loadingDiv = document.getElementById('loading');
+        
+        errorDiv.classList.remove('show');
+        resultDiv.classList.remove('show');
+        
+        if (!grant || !expense) {
+            showError('Please fill in all fields');
+            return;
+        }
+        
+        loadingDiv.classList.add('show');
+        const button = document.querySelector('button');
+        button.disabled = true;
+        
+        try {
+            const matched = await matchExpense(expense);
+            const guidance = getGuidance(grant, matched);
+            
+            document.getElementById('resultContent').textContent = guidance;
+            resultDiv.classList.add('show');
+            loadingDiv.classList.remove('show');
+        } catch (err) {
+            console.error('Error:', err);
+            showError('Error processing request. Please try again.');
+        } finally {
+            button.disabled = false;
+            loadingDiv.classList.remove('show');
+        }
+    };
+    
+    // Enter key support
+    document.getElementById('expense').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && e.ctrlKey) {
+            window.lookupGuidance();
+        }
+    });
+    
+    // Initialize on load
+    window.addEventListener('load', async () => {
+        // Attach click action directly to the button
+        const button = document.querySelector('button');
+        if (button) {
+            button.addEventListener('click', window.lookupGuidance);
+        }
+
+        // Load your background files
+        loadCSV();
+        loadEmbeddings();
+    });
+</script>
+</body>
+</html>
