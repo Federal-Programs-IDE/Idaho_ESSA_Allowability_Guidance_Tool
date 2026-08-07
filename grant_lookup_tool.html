@@ -225,9 +225,9 @@
     // Load embeddings
     async function loadEmbeddings() {
         try {
-            const embeddings = JSON.parse(`__EMBEDDINGS_DATA__`);
-            expenseTypes = JSON.expense_types;
-            embeddings = JSON.embeddings;
+            const parsedData = JSON.parse(`__EMBEDDINGS_DATA__`);
+            expenseTypes = parsedData.expense_types;
+            embeddings = parsedData.embeddings;
         } catch (err) {
             console.error('Error loading embeddings:', err);
             showError('Could not load embeddings: ' + err.message);
