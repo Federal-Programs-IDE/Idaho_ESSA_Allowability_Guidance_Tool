@@ -225,8 +225,7 @@
     // Load embeddings
     async function loadEmbeddings() {
         try {
-            const response = await fetch('embeddings.json');
-            const json = await response.json();
+            const embeddings = __EMBEDDINGS_DATA__;
             expenseTypes = json.expense_types;
             embeddings = json.embeddings;
         } catch (err) {
