@@ -176,7 +176,7 @@
             <textarea id="expense" placeholder="e.g., doughnuts for staff meeting, professional development books, classroom supplies"></textarea>
         </div>
         
-        <button >Get Guidance</button>
+        <button id="submitBtn">Get Guidance</button>
         
         <div class="loading" id="loading">Loading model and analyzing...</div>
         <div class="error" id="error"></div>
@@ -187,7 +187,6 @@
         </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/js-csv@1.1.1/csv.min.js"></script>
     <script type="module">
     import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0';
     
@@ -199,35 +198,35 @@
     let embeddings = [];
     let extractor = null;
     
-    // Load CSV
-    async function loadCSV() {
-    try {
-        data = JSON.parse(`__CSV_DATA__`);
-    } catch (err) {
-        console.error('Error loading CSV data:', err);
-        showError('Could not load CSV data: ' + err.message);
-    }
-}
-    
-    // Load embeddings
-    async function loadEmbeddings() {
+    // Load injected CSV Data
+    function loadCSV() {
         try {
-            const parsedData = JSON.parse(`__EMBEDDINGS_DATA__`);
-            expenseTypes = parsedData.expense_types;
-            embeddings = parsedData.embeddings;
+            data = JSON.parse(`__CSV_DATA__`);
+        } catch (err) {
+            console.error('Error loading CSV data:', err);
+            showError('Could not load CSV data: ' + err.message);
+        }
+    }
+    
+    // Load injected Embeddings Data
+    function loadEmbeddings() {
+        try {
+            const parsed = JSON.parse(`__EMBEDDINGS_DATA__`);
+            expenseTypes = parsed.expense_types;
+            embeddings = parsed.embeddings;
         } catch (err) {
             console.error('Error loading embeddings:', err);
             showError('Could not load embeddings: ' + err.message);
         }
     }
     
-    // Load model
+    // Load ML model
     async function loadModel() {
         try {
             extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
         } catch (err) {
             console.error('Error loading model:', err);
-            showError('Could not load model');
+            showError('Could not load vector search model.');
         }
     }
     
@@ -281,7 +280,7 @@
         });
         
         if (matchedRows.length === 0) {
-            return 'Sorry I didn\'t understand, please try again';
+            return "Sorry I didn't understand, please try again";
         }
         
         return matchedRows.map(row => {
@@ -303,12 +302,13 @@
         loadingDiv.classList.remove('show');
     }
     
-    window.lookupGuidance = async function() {
+    async function lookupGuidance() {
         const grant = document.getElementById('grant').value.trim();
         const expense = document.getElementById('expense').value.trim();
         const errorDiv = document.getElementById('error');
         const resultDiv = document.getElementById('result');
         const loadingDiv = document.getElementById('loading');
+        const button = document.getElementById('submitBtn');
         
         errorDiv.classList.remove('show');
         resultDiv.classList.remove('show');
@@ -319,7 +319,6 @@
         }
         
         loadingDiv.classList.add('show');
-        const button = document.querySelector('button');
         button.disabled = true;
         
         try {
@@ -328,34 +327,31 @@
             
             document.getElementById('resultContent').textContent = guidance;
             resultDiv.classList.add('show');
-            loadingDiv.classList.remove('show');
         } catch (err) {
             console.error('Error:', err);
-            showError('Error processing request. Please try again.');
+            showError('Error processing request: ' + err.message);
         } finally {
             button.disabled = false;
             loadingDiv.classList.remove('show');
         }
-    };
+    }
     
-    // Enter key support
-    document.getElementById('expense').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' && e.ctrlKey) {
-            window.lookupGuidance();
-        }
-    });
-    
-    // Initialize on load
-    window.addEventListener('load', async () => {
-        // Attach click action directly to the button
-        const button = document.querySelector('button');
-        if (button) {
-            button.addEventListener('click', window.lookupGuidance);
-        }
-
-        // Load your background files
+    // Attach listener to button and initialize on page load
+    window.addEventListener('load', () => {
         loadCSV();
         loadEmbeddings();
+
+        const button = document.getElementById('submitBtn');
+        if (button) {
+            button.addEventListener('click', lookupGuidance);
+        }
+    });
+
+    // Ctrl+Enter key support
+    document.getElementById('expense').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && e.ctrlKey) {
+            lookupGuidance();
+        }
     });
 </script>
 </body>
