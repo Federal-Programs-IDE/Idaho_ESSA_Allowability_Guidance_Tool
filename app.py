@@ -10,7 +10,7 @@ with open("embeddings.json", "r") as f:
 with open("grant_lookup_tool.html", "r", encoding="utf-8") as f:
     html_code = f.read()
 
-injected_html = html_code.replace("__EMBEDDINGS_DATA__", embeddings_data)
+injected_html = html_code.replace("__EMBEDDINGS_DATA__", json.dumps(embeddings_data))
 
 # 4. Render
 components.html(injected_html, height=600)
