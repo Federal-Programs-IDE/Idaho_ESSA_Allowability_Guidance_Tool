@@ -14,7 +14,11 @@ with col2:
     st.image("SDE-logo.jpg", width=200)
 
 # Instructions
-st.info("Select the grant you are looking to use funds from and enter the purchase you which to make. Relevant guidance will appear below.")
+st.markdown("""
+<div style="background-color: #002742; padding: 15px; border-radius: 5px;">
+<p style="color: #FFFFFF;">Select the grant you are looking to use funds from and enter the purchase you which to make. Relevant guidance will appear below</p>
+</div>
+""", unsafe_allow_html=True)
 # Disclaimer
 st.markdown("<small>*This is for information purposes only and not considered offical. For further details, please contact the [Federal Programs Team](https://www.sde.idaho.gov/about-us/our-staff/federal-programs/)*</small>", unsafe_allow_html=True)
 
