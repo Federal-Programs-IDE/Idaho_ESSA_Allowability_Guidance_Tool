@@ -16,7 +16,7 @@ with col2:
 # Instructions
 st.info("Select the grant you are looking to use funds from and enter the purchase you which to make. Relevant guidance will appear below.")
 # Disclaimer
-st.markdown("<small>*This is for information purposes only and not considered offical. For further details, please consult the Use of Funds Manual or Contact the Federal Programs Team")
+st.markdown("<small>*This is for information purposes only and not considered offical. For further details, please contact the [Federal Programs Team](https://www.sde.idaho.gov/about-us/our-staff/federal-programs/)*</small>", unsafe_allow_html=True)
 
 def get_guidance(grant, expense_type):
     df = pd.read_csv("allowable_use_mapping.csv").fillna("")
