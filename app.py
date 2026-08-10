@@ -24,10 +24,11 @@ def get_guidance(grant, expense_type):
     result = pd.concat([all_match, grant_match])
 
     if not result.empty:
-        return "\n".join(result.apply(
+        return "\n\n".join(result.apply(
             lambda row: f"{row['Guidance']}: {row['Status']}" if row['Guidance'] else row['Status'],
             axis=1
         ).tolist())
+        return "\n\n".join(formatted_list)
 
     return "Error: Please Try Again"
 
@@ -73,4 +74,4 @@ if st.button("Get Guidance"):
     else:
         matched_expense = match_expense(expense_description)
         result = get_guidance(grant, matched_expense)
-        st.write(result)
+        st.markdown(result)
