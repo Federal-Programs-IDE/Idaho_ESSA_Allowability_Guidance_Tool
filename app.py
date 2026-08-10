@@ -11,7 +11,7 @@ os.environ['HF_HUB_OFFLINE'] = '1'
 # Include Logo so we look official
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    st.image("SDE_Logo.jpg", width=200)
+    st.image("SDE-logo.jpg", width=200)
 
 st.info("Select the grant you are looking to use funds from and enter the purchase you which to make. Relevant guidance will appear below. \n Note that this is for information purposes only and not considered official. For additional details, please consult the Use of Funds Manual, or concat the Federal Programs team")
 
