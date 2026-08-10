@@ -9,7 +9,7 @@ import streamlit as st
 os.environ['HF_HUB_OFFLINE'] = '1'
 
 # Include Logo so we look official
-st.image("SDE-Logo.png", width=200)
+st.image("SDE-Logo.jpg", width=200)
 
 def get_guidance(grant, expense_type):
     df = pd.read_csv("allowable_use_mapping.csv").fillna("")
