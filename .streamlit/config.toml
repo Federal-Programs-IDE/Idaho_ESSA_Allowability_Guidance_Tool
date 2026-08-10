@@ -1,5 +1,5 @@
 [theme]
-primaryColor = "#024D99"          # our blue
-backgroundColor = "#024D99"       # our blue, background
-secondaryBackgroundColor = "#002742" # navy, entry box
-textColor = "#FFFFFC"             # yellow text
+primaryColor = "#024D99"              # our blue
+backgroundColor = "#024D99"           # our blue, background
+secondaryBackgroundColor = "#FFFFFC"   #  entry box
+textColor = "#E8C221"                 # text
