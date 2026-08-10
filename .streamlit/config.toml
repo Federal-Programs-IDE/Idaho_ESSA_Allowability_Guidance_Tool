@@ -1,5 +1,5 @@
 [theme]
-primaryColor = "#003366"          # Primary color for buttons & active highlights
-backgroundColor = "#FFFFFF"       # Main background color
-secondaryBackgroundColor = "#F0F2F6" # Sidebar and input box background color
-textColor = "#333333"
+primaryColor = "#66000F"          # red
+backgroundColor = "#000A66"       # blue
+secondaryBackgroundColor = "#00661B" # green
+textColor = "#636600" # yellow
