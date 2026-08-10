@@ -33,7 +33,7 @@ def get_guidance(grant, expense_type):
     # Return all rows if School Improvement or V-B selected
     if grant in ['Title I-A SI','Title V-B']:
         result = df[df['Grant'] == grant][['Guidance','Status']]
-        return result.apply(lambda row: f"{row['Guidance']}:row{'Status'}", axis=1).tolist()
+        return '\n'.join(result.apply(lambda row: f"{row['Guidance']}: {row['Status']}", axis=1))
 
     # Return for cases where the expense applies to all grants
     all_match = df[(df['Grant'] == 'All') & (df['Expense Type'].isin(expense_type))]
