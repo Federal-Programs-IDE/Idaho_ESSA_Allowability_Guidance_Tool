@@ -13,9 +13,9 @@ df = pd.read_csv("allowable_use_mapping.csv")
 csv_dict = [
     {
         "grant": str(row.get("grant", "")),
-        "expenseType": str(row.get("expenseType", "")),
-        "status": str(row.get("status", "")),
-        "guidance": str(row.get("guidance", ""))
+        "expenseType": str(row.get("Expense Type", "")),
+        "status": str(row.get("Status", "")),
+        "guidance": str(row.get("Guidance", ""))
     }
     for _, row in df.iterrows()
 ]
