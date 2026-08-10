@@ -30,4 +30,4 @@ injected_html = html_code.replace("__EMBEDDINGS_DATA__", embeddings_data)
 injected_html = injected_html.replace("__CSV_DATA__", csv_json_data)
 
 # 5. Render
-components.html(injected_html, height=600)
+components.html(injected_html, height=600, unsafe_allow_html=True)
