@@ -1,7 +1,7 @@
 [theme]
-primaryColor = "#024D99"              # our blue
-backgroundColor = "#024D99"           # our blue, background
-secondaryBackgroundColor = "#002742"   #  entry box
+primaryColor = "#002742"              # our blue
+backgroundColor = "#002742"           # our blue, background
+secondaryBackgroundColor = "#024D99"   #  entry box
 textColor = "#FFFFFF"                 # text
 
 # black is #000000
