@@ -9,19 +9,19 @@ import streamlit as st
 os.environ['HF_HUB_OFFLINE'] = '1'
 
 # Include Logo so we look official
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.columns(3)
 with col2:
     st.image("SDE-logo.jpg", width=200)
 
-PRIMARY_COLOR = "#FFFFFF"
-BG_COLOR = "#024D99"
-SECONDARY_BG = "#002742"
-TEXT_COLOR = "#FFFFFF"
+PRIMARY_COLOR = "#FFFFFF" # white
+BG_COLOR = "#024D99" # blue
+SECONDARY_BG = "#002742" # navy
+TEXT_COLOR = "#FFFFFF" # white
 
 # Instructions
 st.markdown("""
-<div style="background-color: {SECONDARY_BG}; padding: 15px; border-radius: 5px;">
-<p style="color: #FFFFFF;">Select the grant you are looking to use funds from and enter the purchase you which to make. Relevant guidance will appear below</p>
+<div style="background-color: {SECONDARY_BG}; padding: 15px 20px; border-radius: 5px; text-align: center;">
+<p style="color: {TEXT_COLOR};">Select the grant you are looking to use funds from and enter the purchase you which to make. Relevant guidance will appear below</p>
 </div>
 """, unsafe_allow_html=True)
 # Disclaimer
