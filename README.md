@@ -6,5 +6,7 @@ allowable_use_mapping.csv is the document created from the Use of Funds Mannual
 
 app.py is the main file the program is run through
 
+the config.toml file sets up the color schemes (works in conjunction with the color scheme at the beginning of the app.py file
+
 Final app found at:
 https://idaho-essa-allowability-app.streamlit.app/
