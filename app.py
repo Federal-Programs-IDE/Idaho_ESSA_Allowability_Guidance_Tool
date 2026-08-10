@@ -13,9 +13,14 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.image("SDE-logo.jpg", width=200)
 
+PRIMARY_COLOR = "#FFFFFF"
+BG_COLOR = "#024D99"
+SECONDARY_BG = "#002742"
+TEXT_COLOR = "#FFFFFF"
+
 # Instructions
 st.markdown("""
-<div style="background-color: #002742; padding: 15px; border-radius: 5px;">
+<div style="background-color: {SECONDARY_BG}; padding: 15px; border-radius: 5px;">
 <p style="color: #FFFFFF;">Select the grant you are looking to use funds from and enter the purchase you which to make. Relevant guidance will appear below</p>
 </div>
 """, unsafe_allow_html=True)
