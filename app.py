@@ -5,6 +5,7 @@ from sentence_transformers import SentenceTransformer, util
 import json
 import torch
 import os
+import streamlit as st
 os.environ['HF_HUB_OFFLINE'] = '1'
 
 # Include Logo so we look official
@@ -57,7 +58,7 @@ def match_expense(user_input):
     return [expense_types[i] for i in ranked_idx]
 
 # User input
-import streamlit as st
+
 
 st.title("Grant Expense Guidance Lookup")
 
