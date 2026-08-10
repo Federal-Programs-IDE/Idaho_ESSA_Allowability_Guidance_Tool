@@ -8,8 +8,7 @@ import os
 os.environ['HF_HUB_OFFLINE'] = '1'
 
 # Include Logo so we look official
-with open("SDE-Logo.png", "rb") as f:
-    st.image(f.read(), width=200)
+st.image("SDE_Logo.png", width=200)
 
 def get_guidance(grant, expense_type):
     df = pd.read_csv("allowable_use_mapping.csv").fillna("")
