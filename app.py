@@ -40,7 +40,9 @@ expense_types = data['expense_types']
 embeddings = torch.tensor(data['embeddings'])
 
 # Load model
-model = SentenceTransformer("models/all-MiniLM-L6-v2")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "models", "all-MiniLM-L6-v2")
+
+model = SentenceTransformer(MODEL_PATH)
 
 def match_expense(user_input):
     # Encode user input
