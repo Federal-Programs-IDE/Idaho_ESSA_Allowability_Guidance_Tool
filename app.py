@@ -33,6 +33,8 @@ def get_guidance(grant, expense_type):
     # Return all rows if School Improvement or V-B selected
     if grant in ['Title I-A SI','Title V-B']:
         result = df[df['Grant'] == grant][['Guidance','Status']]
+        if result.empty:
+            return "I didn't quite catch that, please try again or rephrase your request"
         return '\n'.join(result.apply(lambda row: f"{row['Guidance']}: {row['Status']}", axis=1))
 
     # Return for cases where the expense applies to all grants
@@ -48,7 +50,7 @@ def get_guidance(grant, expense_type):
             axis=1
         ).tolist())
 
-    return "Error: Please Try Again"
+    return "I didn't quite catch that, please try again or rephrase your request"
 
 
 # Load pre-computed embeddings
