@@ -28,11 +28,8 @@ st.markdown("""
 # Disclaimer
 st.markdown("<small>*This is for information purposes only and not considered offical. For further details, please contact the [Federal Programs Team](https://www.sde.idaho.gov/about-us/our-staff/federal-programs/)*</small>", unsafe_allow_html=True)
 
-def match_expense(user_input):
-    if profanity.contains_profanity(user_input):
-        return []
-
 def get_guidance(grant, expense_type):
+    
     df = pd.read_csv("allowable_use_mapping.csv").fillna("")
 
     # Return all rows if School Improvement or V-B selected
@@ -69,6 +66,9 @@ embeddings = torch.tensor(data['embeddings'])
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
 def match_expense(user_input):
+    # Account for inappropriate responses
+    if profanity.contains_profanity(user_input):
+        return []
     # Encode user input
     user_embedding = model.encode(user_input)
     
