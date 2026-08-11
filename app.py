@@ -98,4 +98,4 @@ if st.button("Get Guidance"):
         print("Result:", result)  # Debug line
         st.markdown(result)
 
-st.markdown("<small>*This tool can make mistakes. *</small>", unsafe_allow_html=True)
+st.markdown("<small>*This tool can make mistakes</small>", unsafe_allow_html=True)
