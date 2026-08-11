@@ -6,6 +6,7 @@ import json
 import torch
 import os
 import streamlit as st
+from better_profanity import profanity
 os.environ['HF_HUB_OFFLINE'] = '1'
 
 # Include Logo so we look official
@@ -96,3 +97,5 @@ if st.button("Get Guidance"):
         result = get_guidance(grant, matched_expense)
         print("Result:", result)  # Debug line
         st.markdown(result)
+
+st.markdown("<small>*This tool can make mistakes. *</small>", unsafe_allow_html=True)
