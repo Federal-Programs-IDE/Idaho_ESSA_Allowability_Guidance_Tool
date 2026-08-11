@@ -52,7 +52,7 @@ def get_guidance(grant, expense_type):
 
     if not result.empty:
         return "\n\n".join(result.apply(
-            lambda row: f"{row['Expense Type']}-- {row['Guidance']}: {row['Status']}" if row['Guidance'] else f"{row['Expense Type']}-- {row['Status']}",
+            lambda row: f"{row['Expense Type']} -- {row['Guidance']}: {row['Status']}" if row['Guidance'] else f"{row['Expense Type']}-- {row['Status']}",
             axis=1
         ).tolist())
 
