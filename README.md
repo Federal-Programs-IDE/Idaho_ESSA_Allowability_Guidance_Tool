@@ -8,5 +8,8 @@ app.py is the main file the program is run through
 
 the config.toml file sets up the color schemes (works in conjunction with the color scheme at the beginning of the app.py file
 
+****CAREFUL LOOKING AT THE blocked_words.txt FILE******
+To ensure individuals don't get misleading guidance when entering inappropriate prompts, that file is referenced. Unfortunately there isn't an easy way to tell a computer what is suggestive, inappropriate, derogatory, or otherwise offensive without making an explicit list. The list contains those words. People are weird, end statement.
+
 Final app found at:
-https://idaho-essa-allowability-app.streamlit.app/
+https://idaho-essa-allowability.streamlit.app/
