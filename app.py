@@ -6,12 +6,11 @@ import json
 import torch
 import os
 import streamlit as st
-from better_profanity import profanity
 os.environ['HF_HUB_OFFLINE'] = '1'
 
 # Load custom blocklist
-# with open('blocked_words.txt', 'r') as f:
-#     custom_words = [word.strip() for word in f.readlines()]
+with open('blocked_words.txt', 'r') as f:
+    custom_words = [word.strip() for word in f.readlines()]
 
 # Include Logo so we look official
 col1, col2, col3 = st.columns(3)
@@ -71,11 +70,11 @@ model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
 def match_expense(user_input):
     # Account for inappropriate responses because people are terrible
-    # if profanity.contains_profanity(user_input):
-    #     return []
+    if profanity.contains_profanity(user_input):
+        return []
     
-    # if any(word in user_input.lower() for word in custom_words):
-    #     return []
+    if any(word in user_input.lower() for word in custom_words):
+        return []
     
     # Encode user input
     user_embedding = model.encode(user_input)
