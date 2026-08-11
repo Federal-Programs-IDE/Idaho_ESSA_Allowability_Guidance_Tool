@@ -6,6 +6,7 @@ import json
 import torch
 import os
 import streamlit as st
+from better_profanity import profanity
 os.environ['HF_HUB_OFFLINE'] = '1'
 
 # Load custom blocklist
