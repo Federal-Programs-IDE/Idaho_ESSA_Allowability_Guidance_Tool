@@ -21,7 +21,7 @@ TEXT_COLOR = "#FFFFFF" # white
 # Instructions
 st.markdown("""
 <div style="background-color: {SECONDARY_BG}; padding: 20px; border-radius: 5px; width: 100%; box-sizing: border-box;">
-<p style="color: {TEXT_COLOR}; text-align: center; margin: 0;">Select the grant you are looking to use funds from and enter the purchase you which to make. Relevant guidance will appear below</p>
+<p style="color: {TEXT_COLOR}; text-align: center; margin: 0;">Select the grant you are looking to use funds from and enter the purchase you wish to make. Relevant guidance will appear below</p>
 </div>
 """, unsafe_allow_html=True)
 # Disclaimer
