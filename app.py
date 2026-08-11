@@ -94,4 +94,5 @@ if st.button("Get Guidance"):
     else:
         matched_expense = match_expense(expense_description)
         result = get_guidance(grant, matched_expense)
+        print("Result:", result)  # Debug line
         st.markdown(result)
