@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant Expense Guidance Lookup</title>
+    <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #024D99;
+            color: #FFFFFF;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #024D99;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        .instructions {
+            background-color: #002742;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            background-color: #FFFFFF;
+            color: #333;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: #FFFFFF;
+            color: #024D99;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        button:hover {
+            background-color: #f0f0f0;
+        }
+        
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .error {
+            background-color: #c33;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .error.show {
+            display: block;
+        }
+        
+        .result {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 30px;
+            display: none;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.6;
+        }
+        
+        .result.show {
+            display: block;
+        }
+        
+        .loading {
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
+        
+        .loading.show {
+            display: block;
+        }
+        
+        .spinner {
+            border: 4px solid #f0f0f0;
+            border-top: 4px solid #FFFFFF;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .disclaimer {
+            font-size: 12px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .disclaimer a {
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <!-- Logo placeholder - remove or replace with actual logo -->
+            </div>
+            <h1>Grant Expense Guidance Lookup</h1>
+        </div>
+        
+        <div class="instructions">
+            <p>Select the grant you are looking to use funds from and enter the purchase you wish to make. Relevant guidance will appear below</p>
+        </div>
+        
+        <div class="disclaimer">
+            <small>*This is for information purposes only and not considered official. For further details, please contact the Federal Programs Team*</small>
+        </div>
+        
+        <div id="error" class="error"></div>
+        
+        <div class="form-group">
+            <label for="grant">Select Title Grant</label>
+            <select id="grant">
+                <option value="">-- Select a grant --</option>
+                <option value="Title I-A">Title I-A</option>
+                <option value="Title I-A SI">Title I-A SI</option>
+                <option value="Title I-C">Title I-C</option>
+                <option value="Title I-D Subpart 1">Title I-D Subpart 1</option>
+                <option value="Title I-D Subpart 2">Title I-D Subpart 2</option>
+                <option value="Title I-D">Title I-D</option>
+                <option value="Title II-A">Title II-A</option>
+                <option value="Title III-A">Title III-A</option>
+                <option value="Title III-A Immigrant">Title III-A Immigrant</option>
+                <option value="Title IV-A">Title IV-A</option>
+                <option value="Title V-B">Title V-B</option>
+                <option value="Title IX-A">Title IX-A</option>
+                <option value="Equitable Services">Equitable Services</option>
+                <option value="Parent Engagement">Parent Engagement</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="expense">Describe the expense</label>
+            <textarea id="expense" placeholder="e.g., doughnuts for meeting"></textarea>
+        </div>
+        
+        <button id="submit" onclick="handleSubmit()">Get Guidance</button>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+        
+        <div id="result" class="result"></div>
+        
+        <div class="disclaimer">
+            <small>*This tool can make mistakes*</small>
+        </div>
+    </div>
+    
+    <script>
+        // Embedded data
+        const embeddings_data = __EMBEDDINGS_DATA__;
+        const csv_data = __CSV_DATA__;
+        
+        // Blocked words list
+        const blocked_words = ["2g1c","2 girls 1 cup","acrotomophilia","alabama hot pocket","alaskan pipeline","anal","anilingus","anus","apeshit","arsehole","ass","asshole","assmunch","auto erotic","autoerotic","babeland","baby batter","baby juice","ball gag","ball gravy","ball kicking","ball licking","ball sack","ball sucking","bangbros","bangbus","bareback","barely legal","barenaked","bastard","bastardo","bastinado","bbw","bdsm","beaner","beaners","beaver cleaver","beaver lips","beastiality","bestiality","big black","big breasts","big knockers","big tits","bimbos","birdlock","bitch","bitches","black cock","blonde action","blonde on blonde action","blowjob","blow job","blow your load","blue waffle","blumpkin","bollocks","bondage","boner","boob","boobs","booty call","brown showers","brunette action","bukkake","bulldyke","bullet vibe","bullshit","bung hole","bunghole","busty","butt","buttcheeks","butthole","camel toe","camgirl","camslut","camwhore","carpet muncher","carpetmuncher","chocolate rosebuds","cialis","circlejerk","cleveland steamer","clit","clitoris","clover clamps","clusterfuck","cock","cocks","coprolagnia","coprophilia","cornhole","coon","coons","creampie","cum","cumming","cumshot","cumshots","cunnilingus","cunt","darkie","date rape","daterape","deep throat","deepthroat","dendrophilia","dick","dildo","dingleberry","dingleberries","dirty pillows","dirty sanchez","doggie style","doggiestyle","doggy style","doggystyle","dog style","dolcett","domination","dominatrix","dommes","donkey punch","double dong","double penetration","dp action","dry hump","dvda","eat my ass","ecchi","ejaculation","erotic","erotism","escort","eunuch","fag","faggot","fecal","felch","fellatio","feltch","female squirting","femdom","figging","fingerbang","fingering","fisting","foot fetish","footjob","frotting","fuck","fuck buttons","fuckin","fucking","fucktards","fudge packer","fudgepacker","futanari","gangbang","gang bang","gay sex","genitals","giant cock","girl on","girl on top","girls gone wild","goatcx","goatse","god damn","gokkun","golden shower","goodpoop","goo girl","goregasm","grope","group sex","g-spot","guro","hand job","handjob","hard core","hardcore","hentai","homoerotic","honkey","hooker","horny","hot carl","hot chick","how to kill","how to murder","huge fat","humping","incest","intercourse","jack off","jail bait","jailbait","jelly donut","jerk off","jigaboo","jiggaboo","jiggerboo","jizz","juggs","kike","kinbaku","kinkster","kinky","knobbing","leather restraint","leather straight jacket","lemon party","livesex","lolita","lovemaking","make me come","male squirting","masturbate","masturbating","masturbation","menage a trois","milf","missionary position","mong","motherfucker","mound of venus","mr hands","muff diver","muffdiving","nambla","nawashi","negro","neonazi","nigga","nigger","nig nog","nimphomania","nipple","nipples","nsfw","nsfw images","nude","nudity","nutten","nympho","nymphomania","octopussy","omorashi","one cup two girls","one guy one jar","orgasm","orgy","paedophile","paki","panties","panty","pedobear","pedophile","pegging","penis","phone sex","piece of shit","pikey","pissing","piss pig","pisspig","playboy","pleasure chest","pole smoker","ponyplay","poof","poon","poontang","punany","poop chute","poopchute","porn","porno","pornography","prince albert piercing","pthc","pubes","pussy","queaf","queef","quim","raghead","raging boner","rape","raping","rapist","rectum","reverse cowgirl","rimjob","rimming","rosy palm","rosy palm and her 5 sisters","rusty trombone","sadism","santorum","scat","schlong","scissoring","semen","sex","sexcam","sexo","sexy","sexual","sexually","sexuality","shaved beaver","shaved pussy","shemale","shibari","shit","shitblimp","shitty","shota","shrimping","skeet","slanteye","slut","s&m","smut","snatch","snowballing","sodomize","sodomy","spastic","spic","splooge","splooge moose","spooge","spread legs","spunk","strap on","strapon","strappado","strip club","style doggy","suck","sucks","suicide girls","sultry women","swastika","swinger","tainted love","taste my","tea bagging","threesome","throating","thumbzilla","tied up","tight white","tit","tits","titties","titty","tongue in a","topless","tosser","towelhead","tranny","tribadism","tub girl","tubgirl","tushy","twat","twink","twinkie","two girls one cup","undressing","upskirt","urethra play","urophilia","vagina","venus mound","viagra","vibrator","violet wand","vorarephilia","voyeur","voyeurweb","voyuer","vulva","wank","wetback","wet dream","white power","whore","worldsex","wrapping men","wrinkled starfish","xx","xxx","yaoi","yellow showers","yiffy","zoophilia","🖕"];
+        
+        let model;
+        let modelLoaded = false;
+        
+        // Initialize model on page load
+        async function initModel() {
+            try {
+                model = await (await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0')).pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+                modelLoaded = true;
+            } catch (error) {
+                console.error('Model load error:', error);
+                showError('Failed to load model. Please refresh the page.');
+            }
+        }
+        
+        // Cosine similarity calculation
+        function cosineSimilarity(a, b) {
+            let dotProduct = 0;
+            let normA = 0;
+            let normB = 0;
+            
+            for (let i = 0; i < a.length; i++) {
+                dotProduct += a[i] * b[i];
+                normA += a[i] * a[i];
+                normB += b[i] * b[i];
+            }
+            
+            normA = Math.sqrt(normA);
+            normB = Math.sqrt(normB);
+            
+            if (normA === 0 || normB === 0) return 0;
+            return dotProduct / (normA * normB);
+        }
+        
+        // Check for profanity or blocked words
+        function containsBlockedContent(text) {
+            const lower = text.toLowerCase();
+            for (let word of blocked_words) {
+                if (lower.includes(word.toLowerCase())) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        // Get top matched expense types
+        async function matchExpense(userInput) {
+            if (containsBlockedContent(userInput)) {
+                return [];
+            }
+            
+            try {
+                const result = await model(userInput, { pooling: 'mean', normalize: true });
+                const userEmbedding = Array.from(result.data);
+                
+                const similarities = embeddings_data.embeddings.map((emb, idx) => ({
+                    score: cosineSimilarity(userEmbedding, emb),
+                    index: idx
+                }));
+                
+                similarities.sort((a, b) => b.score - a.score);
+                
+                return similarities.slice(0, 10).map(item => embeddings_data.expense_types[item.index]);
+            } catch (error) {
+                console.error('Match error:', error);
+                return [];
+            }
+        }
+        
+        // Get guidance from CSV
+        function getGuidance(grant, expenseTypes) {
+            // Return all rows if Title I-A SI or Title V-B
+            if (grant === 'Title I-A SI' || grant === 'Title V-B') {
+                const result = csv_data.filter(row => row.Grant === grant);
+                if (result.length === 0) {
+                    return "I didn't quite catch that, please try again or rephrase your request";
+                }
+                return result.map(row => `${row.Guidance}: ${row.Status}`).join('\n');
+            }
+            
+            if (!grant || expenseTypes.length === 0) {
+                return "I didn't quite catch that, please try again or rephrase your request";
+            }
+            
+            // Get "All" matches
+            const allMatch = csv_data.filter(row => 
+                row.Grant === 'All' && expenseTypes.includes(row['Expense Type'])
+            );
+            
+            // Get grant-specific matches
+            const grantMatch = csv_data.filter(row => 
+                row.Grant === grant && expenseTypes.includes(row['Expense Type'])
+            );
+            
+            const result = [...allMatch, ...grantMatch];
+            
+            if (result.length === 0) {
+                return "I didn't quite catch that, please try again or rephrase your request";
+            }
+            
+            return result.map(row => {
+                if (row.Guidance) {
+                    return `${row['Expense Type']} -- ${row.Guidance}: ${row.Status}`;
+                } else {
+                    return `${row['Expense Type']} -- ${row.Status}`;
+                }
+            }).join('\n\n');
+        }
+        
+        // UI functions
+        function showError(message) {
+            const errorEl = document.getElementById('error');
+            errorEl.textContent = message;
+            errorEl.classList.add('show');
+        }
+        
+        function hideError() {
+            const errorEl = document.getElementById('error');
+            errorEl.classList.remove('show');
+        }
+        
+        function showLoading() {
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('submit').disabled = true;
+        }
+        
+        function hideLoading() {
+            document.getElementById('loading').classList.remove('show');
+            document.getElementById('submit').disabled = false;
+        }
+        
+        // Handle form submission
+        async function handleSubmit() {
+            hideError();
+            const grantSelect = document.getElementById('grant');
+            const expenseInput = document.getElementById('expense');
+            const grant = grantSelect.value;
+            const expense = expenseInput.value.trim();
+            
+            if (!grant || !expense) {
+                showError('Please fill in all fields');
+                return;
+            }
+            
+            if (!modelLoaded) {
+                showError('Model is still loading. Please wait a moment and try again.');
+                return;
+            }
+            
+            showLoading();
+            
+            try {
+                const matched = await matchExpense(expense);
+                const guidance = getGuidance(grant, matched);
+                
+                const resultEl = document.getElementById('result');
+                resultEl.textContent = guidance;
+                resultEl.classList.add('show');
+            } catch (error) {
+                console.error('Error:', error);
+                showError('An error occurred. Please try again.');
+            } finally {
+                hideLoading();
+            }
+        }
+        
+        // Initialize model when page loads
+        window.addEventListener('load', initModel);
+    </script>
+</body>
+</html>
