@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grant Expense Guidance Lookup</title>
+    <title>Grant Information Guidance Index</title>
     <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0"></script>
     <style>
         * {
@@ -11,78 +11,78 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #024D99;
-            color: #FFFFFF;
+            /* Pause here! */
+            background-color: #FFFFFF; /* Main page background */
+            color: #002742; /* Default text on page */
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background-color: #024D99;
+            background-color: #FFFFFF; /* Container background */
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         .logo {
             margin-bottom: 20px;
         }
-        
+
         .logo img {
             max-width: 200px;
             height: auto;
         }
-        
+
         .instructions {
-            background-color: #002742;
+            background-color: #002742; /* Instructions box background */
             padding: 20px;
             border-radius: 5px;
             margin-bottom: 30px;
             text-align: center;
-            color: #FFFFFF;
+            color: #FFFFFF; /* Instructions text */
         }
-        
+
         h1 {
             font-size: 28px;
             margin-bottom: 20px;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
         }
-        
+
         select, textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid #024D99; /* Input field border */
             border-radius: 4px;
             font-size: 14px;
             font-family: inherit;
-            background-color: #FFFFFF;
-            color: #333;
+            background-color: #024D99; /* Input field background */
+            color: #FFFFFF; /* Text you type in fields */
         }
-        
+
         textarea {
             min-height: 100px;
             resize: vertical;
         }
-        
+
         button {
-            background-color: #FFFFFF;
-            color: #024D99;
+            background-color: #024D99; /* Button background */
+            color: #FFFFFF; /* Button text */
             padding: 12px 30px;
             border: none;
             border-radius: 4px;
@@ -91,31 +91,32 @@
             cursor: pointer;
             width: 100%;
         }
-        
+
         button:hover {
-            background-color: #f0f0f0;
+            background-color: #e8c221; /* Button hover state */
         }
-        
+
         button:disabled {
-            background-color: #ccc;
+            background-color: #ccc; /* Button when disabled */
             cursor: not-allowed;
         }
-        
+
         .error {
-            background-color: #c33;
+            background-color: #c33; /* Error box background */
             padding: 12px;
             border-radius: 4px;
             margin-bottom: 20px;
             display: none;
+            color: #FFFFFF
         }
-        
+
         .error.show {
             display: block;
         }
-        
+
         .result {
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #024D99; /* Results box background */
+            color: #FFFFFF; /* Results text */
             padding: 20px;
             border-radius: 4px;
             margin-top: 30px;
@@ -124,44 +125,47 @@
             word-wrap: break-word;
             line-height: 1.6;
         }
-        
+
         .result.show {
             display: block;
         }
-        
+
         .loading {
             text-align: center;
             display: none;
             margin-top: 20px;
         }
-        
+
         .loading.show {
             display: block;
         }
-        
+
         .spinner {
-            border: 4px solid #f0f0f0;
-            border-top: 4px solid #FFFFFF;
+            border: 4px solid #f0f0f0; /* Spinner ring */
+            border-top: 4px solid #FFFFFF; /* Spinner top color */
             border-radius: 50%;
             width: 40px;
             height: 40px;
             animation: spin 1s linear infinite;
             margin: 0 auto;
         }
-        
+
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
+
         .disclaimer {
             font-size: 12px;
             margin-top: 20px;
             text-align: center;
         }
-        
+
         .disclaimer a {
-            color: #FFFFFF;
+            color: #FFFFFF; /* Disclaimer links */
+        }
+        textarea::placeholder {
+            color: #999; /* Placeholder text color */
         }
     </style>
 </head>
@@ -169,9 +173,9 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <img src="SDE-logo.jpg" alt="SDE Logo" width="200">
+                <img src="SDE-Logo.png" alt="SDE Logo" width="200">
             </div>
-            <h1>Grant Expense Guidance Lookup</h1>
+            <h1>Grant Information Guidance Index</h1>
         </div>
         
         <div class="instructions">
@@ -189,7 +193,7 @@
             <select id="grant">
                 <option value="">-- Select a grant --</option>
                 <option value="Title I-A">Title I-A</option>
-                <option value="Title I-A SI">Title I-A SI</option>
+                <option value="Title I-A School Improvement">Title I-A School Improvement</option>
                 <option value="Title I-C">Title I-C</option>
                 <option value="Title I-D Subpart 1">Title I-D Subpart 1</option>
                 <option value="Title I-D Subpart 2">Title I-D Subpart 2</option>
@@ -302,14 +306,27 @@
         
         // Get guidance from CSV
         function getGuidance(grant, expenseTypes) {
-            // Return all rows if Title I-A SI or Title V-B
-            if (grant === 'Title I-A SI' || grant === 'Title V-B') {
-                const result = csv_data.filter(row => row.Grant === grant);
-                if (result.length === 0) {
-                    return "I didn't quite catch that, please try again or rephrase your request";
+            // Return all rows if Title I-A School Improvement or Title V-B
+            let searchGrant = grant;
+            let siGuidance = '';
+
+            // If Title I-A School Improvement, get Title I-A results but also collect SI-specific guidance
+            if (grant === 'Title I-A School Improvement') {
+                searchGrant = 'Title I-A';
+                const siRows = csv_data.filter(row => row.Grant === 'Title I-A School Improvement');
+                if (siRows.length > 0) {
+                siGuidance = '\n\n' + siRows.map(row => `${row.Guidance}: ${row.Status}`).join('\n');
                 }
-                return result.map(row => `${row.Guidance}: ${row.Status}`).join('\n');
             }
+
+            // Return all rows if Title V-B
+            if (searchGrant === 'Title V-B') {
+                const result = csv_data.filter(row => row.Grant === searchGrant);
+                if (result.length === 0) {
+                return "I didn't quite catch that, please try again or rephrase your request";
+            }
+            return result.map(row => `${row.Guidance}: ${row.Status}`).join('\n') + siGuidance;
+        }
             
             if (!grant || expenseTypes.length === 0) {
                 return "I didn't quite catch that, please try again or rephrase your request";
@@ -337,7 +354,7 @@
                 } else {
                     return `${row['Expense Type']} -- ${row.Status}`;
                 }
-            }).join('\n\n');
+            }).join('\n\n') + siGuidance;
         }
         
         // UI functions
