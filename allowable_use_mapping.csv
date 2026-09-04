@@ -86,8 +86,6 @@ Title I-A,Make & Take Activities,Allowable,Purchase and assemble materials for s
 Title I-A,Focus Groups & Surveys,Allowable,Conducting focus groups and developing family input surveys
 Title I-A,Expenditures in Non-Title I School,Not Allowable,"LEA-level activities may only use Title I-A funds in Title I schools, except for required set-asides"
 Title I-A,All Students in Targeted Assistance School,Not Allowable,"Funds must target eligible students, not all students"
-Title I-A SI,Any Activity Aligned to Improvement Plan,,Any activity determined by LEA (with SEA agreement) to help school meet improvement goals is allowable
-Title I-A SI,Expenses in Non-Improvement School,,Cannot use for schools not in school improvement status
 Title I-C,Migrant Coordinator/Director,Allowable,Staff focused on migrant student services
 Title I-C,Family Liaison,Allowable,
 Title I-C,Paraprofessional - Migrant,Allowable,
@@ -177,12 +175,11 @@ Title IV-A,Equipment & Technology,Allowable,"Devices, software, platforms suppor
 Title IV-A,Expenses Not Serving Purpose,Not Allowable,
 Title IV-A,Supplemental Required,Conditional,"Must not be required by federal, state, or local law and not funded by state/local the prior year"
 Title IV-A,Funding Obligations,Conditional,"Districts with $30K+: minimum 20% for well-rounded education, 20% for safe/healthy students, portion for effective technology (at least some for STEM-focused)"
-Title V-B,Any Allowable Activity,Conditional,Addresses unique needs of rural districts; must be supplemental and not replace regular academic program
 Title IX-A,Tutoring & Supplemental Instruction,Allowable,"Services helping homeless children/youth enroll, attend, succeed"
 Title IX-A,Expedited Evaluations,Allowable,"Assess strengths, needs, interests of homeless students"
 Title IX-A,Professional Development - Educators,Allowable,Training for teachers and instructional support staff on serving homeless students
 Title IX-A,Medical & Health Services,Allowable,"Referrals to medical, dental, mental health, other health services"
-Title IX-A,Transportation - Excess Cost,Allowable,Funding excess cost of transportation not covered by federal/state/local funds to remain in school of origin
+Title IX-A,Excess Cost for Transportation,Allowable,Funding excess cost of transportation not covered by federal/state/local funds to remain in school of origin
 Title IX-A,Early Childhood Programs,Allowable,Preschool programs for homeless children
 Title IX-A,Engagement & Retention Services,Allowable,"Activities to attract, engage, retain homeless children/youth"
 Title IX-A,Before/After School & Summer Programs,Allowable,"Mentoring, summer programs for homeless children/youth"
@@ -220,10 +217,195 @@ Parent Engagement,Communication Apps,Allowable,Apps for school-family communicat
 Parent Engagement,Family Engagement Curriculum,Allowable,"Develop curriculum for parent conferences, engagement planning"
 Parent Engagement,Grandparent Technology Training,Allowable,Training for grandparents on technology for school engagement
 Parent Engagement,Make & Take Kits,Allowable,Purchase and assemble materials for families to take home and use with students
-Parent Engagement,Family Nights - With Substance,Allowable,Family engagement events with meaningful content; light refreshments allowable per food guidance
+Parent Engagement,Family Nights With Substance,Allowable,Family engagement events with meaningful content; light refreshments allowable per food guidance
 Parent Engagement,Achievement Improvement Training,Allowable,Training helping families work with students on achievement
 Parent Engagement,Targeted Workshops,Allowable,"Workshops for specific family situations (mothers-daughters, grandparents, single parents, etc.)"
 Parent Engagement,Focus Groups & Surveys,Allowable,"Conduct focus groups, develop surveys to gather family input"
 Parent Engagement,Travel/Conference for Parent Leaders,Allowable,"Registration, materials, reasonable expenses for parents attending conferences/trainings"
 Parent Engagement,Awards Banquet Food,Not Allowable,"Refreshments or meals at awards banquets, celebrations, assemblies"
 Parent Engagement,Full Meal Provision,Not Allowable,Full meals for parent engagement events (except Title I-C PAC exception)
+Title I-A School Improvement,Program Administrator/Grant Manager/Coordinator,Conditional,"Title I portion of salary only. If split duties with non-Title I responsibilities, allocate proportionately. Entire salary allowable only if 100% Title I responsibility"
+Title I-A School Improvement,Data Coordinator,Allowable,
+Title I-A School Improvement,Homeless Liaison,Allowable,
+Title I-A School Improvement,Title I Teacher - Reading or Math Specialist,Allowable,For staff assigned primarily to support Title I students
+Title I-A School Improvement,Instructional Coach,Allowable,Coaching focused on improving instruction for Title I students
+Title I-A School Improvement,Preschool/Early Childhood Education Staff,Allowable,
+Title I-A School Improvement,Summer/Before-After School/Tutoring Staff,Allowable,
+Title I-A School Improvement,Teacher Time - Non-Title I School,Not Allowable,Cannot pay Title I teachers for work in non-Title I schools or with non-Title I students
+Title I-A School Improvement,Substitute Teachers,,Title I is supplemental; cannot pay substitutes for all teachers. Substitutes only if specified in school plan
+Title I-A School Improvement,Instructional Paraprofessional - Title I,Allowable,
+Title I-A School Improvement,Paraprofessional - Non-Title I Students,Not Allowable,Cannot pay for work with non-Title I students
+Title I-A School Improvement,Parent & Family Engagement Liaison,Allowable,
+Title I-A School Improvement,"Benefits (Insurance, PERSI, etc.)",Allowable,Fringe benefits for allowable Title I staff
+Title I-A School Improvement,Tuition Fees for Employees,Allowable,Professional development tuition
+Title I-A School Improvement,Volunteer Contribution Accounts,Not Allowable,
+Title I-A School Improvement,Stipends - Program Administration,Allowable,
+Title I-A School Improvement,Stipends - Professional Development,Allowable,
+Title I-A School Improvement,Stipends - Data & Improvement Planning,Allowable,
+Title I-A School Improvement,Stipends - Parent & Family Engagement,Allowable,
+Title I-A School Improvement,Stipends - Already Compensated Work,Not Allowable,Cannot pay stipends for work already part of regular contractual duties
+Title I-A School Improvement,Benefits for Stipends,Conditional,Limited to FICA and PERSI. Benefits covered through regular contract cannot be double-funded
+Title I-A School Improvement,Professional Development - Presenter/Trainer,Allowable,Cost of on-site presenter or trainer
+Title I-A School Improvement,Professional Development - Conference Registration,Allowable,Conference fees for staff
+Title I-A School Improvement,Professional Development - Training Materials,Allowable,"Books, materials, online courses"
+Title I-A School Improvement,Professional Development - Accreditation Fees,Not Allowable,Accreditation is state requirement; cannot be funded with Title I
+Title I-A School Improvement,Professional Development - Assessment Fees (State-Required),Not Allowable,State-mandated assessment fees are not allowable
+Title I-A School Improvement,Professional Development - Background/Fingerprint Fees,Not Allowable,
+Title I-A School Improvement,Curriculum Supplies,Not Allowable,Regular core classroom supplies for students are not allowable
+Title I-A School Improvement,Books & Instructional Materials,Allowable,For Title I students
+Title I-A School Improvement,Basic & Emergency Supplies,Allowable,"Notebooks, backpacks, school supplies for Title I students"
+Title I-A School Improvement,Clothing/Shoes (Dress Code),Allowable,When necessary to meet school dress requirement
+Title I-A School Improvement,Computers & iPads,Not Allowable,Capital objects/technology equipment
+Title I-A School Improvement,Software,Not Allowable,Capital technology
+Title I-A School Improvement,Extended Learning Time,Allowable,"Before/after school, Saturday classes, summer programs to support Title I students"
+Title I-A School Improvement,Tutoring Services,Allowable,Especially in shelters or other locations where homeless students reside
+Title I-A School Improvement,Mentoring Programs,Allowable,
+Title I-A School Improvement,Counseling Services,Allowable,Including domestic violence counseling and violence prevention counseling
+Title I-A School Improvement,Intervention Programs,Allowable,
+Title I-A School Improvement,Homework Assistance,Allowable,
+Title I-A School Improvement,Medical & Dental Services,Allowable,For Title I students
+Title I-A School Improvement,Eyeglasses & Hearing Aids,Allowable,
+Title I-A School Improvement,Early Childhood Education Programs,Allowable,Discretionary funding for eligible children
+Title I-A School Improvement,Services for Homeless Children,Allowable,Homeless set-aside services and transportation to school of origin
+Title I-A School Improvement,Transportation - Foster Care,Allowable,Additional costs to transport foster care children to school of origin
+Title I-A School Improvement,Equitable Services - Private School,Allowable,Proportional amount based on private school enrollment
+Title I-A School Improvement,English Learner Services,Allowable,Curriculum and instructional materials to identify and serve EL students
+Title I-A School Improvement,Extended Learning for EL Students,Allowable,"Before/after school, weekend, summer programs for English learners"
+Title I-A School Improvement,Parent & Family Engagement Activities,Allowable,Per required set-asides and authorized activities
+Title I-A School Improvement,Professional Development - Parent Engagement,Allowable,Staff training on parent engagement strategies
+Title I-A School Improvement,Community Organization Contracts,Allowable,Contract with nonprofits for engagement activities
+Title I-A School Improvement,Home Visits - Staff,Allowable,"Pay classroom teachers, paraprofessionals, administrators to conduct home visits"
+Title I-A School Improvement,Technology Support for Families,Allowable,Pay staff to help families with technological support
+Title I-A School Improvement,Translation & Interpretation Services,Allowable,Language support for families
+Title I-A School Improvement,Communication Apps,Allowable,Apps for communicating with families
+Title I-A School Improvement,Family Engagement Curriculum,Allowable,Develop curriculum for parent conferences and engagement
+Title I-A School Improvement,Make & Take Activities,Allowable,Purchase and assemble materials for student-family take-home activities
+Title I-A School Improvement,Focus Groups & Surveys,Allowable,Conducting focus groups and developing family input surveys
+Title I-A School Improvement,Expenditures in Non-Title I School,Not Allowable,"LEA-level activities may only use Title I-A funds in Title I schools, except for required set-asides"
+Title I-A School Improvement,All Students in Targeted Assistance School,Not Allowable,"Funds must target eligible students, not all students"
+Title V-B,Program Administrator/Grant Manager/Coordinator,Conditional,"Title I portion of salary only. If split duties with non-Title I responsibilities, allocate proportionately. Entire salary allowable only if 100% Title I responsibility"
+Title V-B,Data Coordinator,Allowable,
+Title V-B,Homeless Liaison,Allowable,
+Title V-B,Title I Teacher - Reading or Math Specialist,Allowable,For staff assigned primarily to support Title I students
+Title V-B,Instructional Coach,Allowable,Coaching focused on improving instruction for Title I students
+Title V-B,Preschool/Early Childhood Education Staff,Allowable,
+Title V-B,Summer/Before-After School/Tutoring Staff,Allowable,
+Title V-B,Teacher Time - Non-Title I School,Not Allowable,Cannot pay Title I teachers for work in non-Title I schools or with non-Title I students
+Title V-B,Substitute Teachers,,Title I is supplemental; cannot pay substitutes for all teachers. Substitutes only if specified in school plan
+Title V-B,Instructional Paraprofessional - Title I,Allowable,
+Title V-B,Paraprofessional - Non-Title I Students,Not Allowable,Cannot pay for work with non-Title I students
+Title V-B,Parent & Family Engagement Liaison,Allowable,
+Title V-B,"Benefits (Insurance, PERSI, etc.)",Allowable,Fringe benefits for allowable Title I staff
+Title V-B,Tuition Fees for Employees,Allowable,Professional development tuition
+Title V-B,Volunteer Contribution Accounts,Not Allowable,
+Title V-B,Stipends - Program Administration,Allowable,
+Title V-B,Stipends - Professional Development,Allowable,
+Title V-B,Stipends - Data & Improvement Planning,Allowable,
+Title V-B,Stipends - Parent & Family Engagement,Allowable,
+Title V-B,Stipends - Already Compensated Work,Not Allowable,Cannot pay stipends for work already part of regular contractual duties
+Title V-B,Benefits for Stipends,Conditional,Limited to FICA and PERSI. Benefits covered through regular contract cannot be double-funded
+Title V-B,Professional Development - Presenter/Trainer,Allowable,Cost of on-site presenter or trainer
+Title V-B,Professional Development - Conference Registration,Allowable,Conference fees for staff
+Title V-B,Professional Development - Training Materials,Allowable,"Books, materials, online courses"
+Title V-B,Professional Development - Accreditation Fees,Not Allowable,Accreditation is state requirement; cannot be funded with Title I
+Title V-B,Professional Development - Assessment Fees (State-Required),Not Allowable,State-mandated assessment fees are not allowable
+Title V-B,Professional Development - Background/Fingerprint Fees,Not Allowable,
+Title V-B,Curriculum Supplies,Not Allowable,Regular core classroom supplies for students are not allowable
+Title V-B,Books & Instructional Materials,Allowable,For Title I students
+Title V-B,Basic & Emergency Supplies,Allowable,"Notebooks, backpacks, school supplies for Title I students"
+Title V-B,Clothing/Shoes (Dress Code),Allowable,When necessary to meet school dress requirement
+Title V-B,Computers & iPads,Not Allowable,Capital objects/technology equipment
+Title V-B,Software,Not Allowable,Capital technology
+Title V-B,Extended Learning Time,Allowable,"Before/after school, Saturday classes, summer programs to support Title I students"
+Title V-B,Tutoring Services,Allowable,Especially in shelters or other locations where homeless students reside
+Title V-B,Mentoring Programs,Allowable,
+Title V-B,Counseling Services,Allowable,Including domestic violence counseling and violence prevention counseling
+Title V-B,Intervention Programs,Allowable,
+Title V-B,Homework Assistance,Allowable,
+Title V-B,Medical & Dental Services,Allowable,For Title I students
+Title V-B,Eyeglasses & Hearing Aids,Allowable,
+Title V-B,Early Childhood Education Programs,Allowable,Discretionary funding for eligible children
+Title V-B,Services for Homeless Children,Allowable,Homeless set-aside services and transportation to school of origin
+Title V-B,Transportation - Foster Care,Allowable,Additional costs to transport foster care children to school of origin
+Title V-B,Equitable Services - Private School,Allowable,Proportional amount based on private school enrollment
+Title V-B,English Learner Services,Allowable,Curriculum and instructional materials to identify and serve EL students
+Title V-B,Extended Learning for EL Students,Allowable,"Before/after school, weekend, summer programs for English learners"
+Title V-B,Parent & Family Engagement Activities,Allowable,Per required set-asides and authorized activities
+Title V-B,Professional Development - Parent Engagement,Allowable,Staff training on parent engagement strategies
+Title V-B,Community Organization Contracts,Allowable,Contract with nonprofits for engagement activities
+Title V-B,Home Visits - Staff,Allowable,"Pay classroom teachers, paraprofessionals, administrators to conduct home visits"
+Title V-B,Technology Support for Families,Allowable,Pay staff to help families with technological support
+Title V-B,Translation & Interpretation Services,Allowable,Language support for families
+Title V-B,Communication Apps,Allowable,Apps for communicating with families
+Title V-B,Family Engagement Curriculum,Allowable,Develop curriculum for parent conferences and engagement
+Title V-B,Make & Take Activities,Allowable,Purchase and assemble materials for student-family take-home activities
+Title V-B,Focus Groups & Surveys,Allowable,Conducting focus groups and developing family input surveys
+Title V-B,Expenditures in Non-Title I School,Not Allowable,"LEA-level activities may only use Title I-A funds in Title I schools, except for required set-asides"
+Title V-B,All Students in Targeted Assistance School,Not Allowable,"Funds must target eligible students, not all students"
+Title V-B,Teacher Salary - Regular Core,Not Allowable,Regular teacher salaries cannot be funded
+Title V-B,Teacher Salary - Supplemental,Allowable,Stipends for Title II-A activities; benefits limited to FICA and PERSI
+Title V-B,Instructional Coach,Allowable,Coach/mentor focused on teacher effectiveness
+Title V-B,Data Coach,Allowable,
+Title V-B,MTSS Coach,Allowable,
+Title V-B,Administrative Staff - Title II-A,Allowable,Costs associated with managing Title II-A program
+Title V-B,Principal Salary - Supplemental,Allowable,Title II-A portion of principal salary for instructional leadership
+Title V-B,Professional Development - Ongoing,Allowable,Cost of sustained PD for improving teacher effectiveness
+Title V-B,Professional Development - Conference,Allowable,Conference registration and attendance
+Title V-B,Professional Development - Materials,Allowable,"Books, online courses, training materials"
+Title V-B,Professional Development - Accreditation,Not Allowable,State-required accreditation is not allowable
+Title V-B,Professional Development - Assessment (State-Required),Not Allowable,State-mandated assessment fees
+Title V-B,Professional Development - Any Employee,Not Allowable,"PD for employees not teaching core curriculum (e.g., coach not teaching core, admin support)"
+Title V-B,Classroom Supplies - Core Curriculum,Not Allowable,Regular classroom supplies for students
+Title V-B,Computers & iPads,Not Allowable,Capital technology objects
+Title V-B,Software,Not Allowable,Capital technology
+Title V-B,Background Check Fees,Not Allowable,
+Title V-B,Fingerprinting Fees,Not Allowable,
+Title V-B,Food - Unrelated Activities,Not Allowable,Food for activities not funded with Title II-A
+Title V-B,Expenses Not Serving Title II-A Purpose,Not Allowable,
+Title V-B,Supplemental Required,Conditional,"Activities must not be required by federal, state, or local law and must not have been funded by state/local funds the prior year"
+Title V-B,EL Coordinator/Director,Allowable,Staff focused on English learner services
+Title V-B,EL Teachers,Allowable,Teachers providing language instruction
+Title V-B,Instructional Staff - EL Services,Allowable,"Paraprofessionals, aides supporting EL students"
+Title V-B,Professional Development - EL Teachers,Allowable,"High-quality PD for classroom teachers, specialists, ESL teachers"
+Title V-B,Professional Development - Administrator,Allowable,Training for school leaders on EL program implementation
+Title V-B,Language Instruction Materials,Allowable,Development and enhancement of language instruction programs
+Title V-B,Family Engagement Activities,Allowable,Strengthen and increase family participation in language programs
+Title V-B,Community Participation,Allowable,Promote family and community engagement in EL programs
+Title V-B,Identification & Assessment,Conditional,LEAs may not use Title III-A to meet civil rights obligations for EL identification and assessment (those are required)
+Title V-B,Language Assistance Program,Conditional,"LEAs may not use Title III-A to meet civil rights obligation to provide educationally sound, proven successful program"
+Title V-B,Staffing for Language Program,Conditional,"LEAs may not use Title III-A to meet civil rights obligation for trained, qualified staff"
+Title V-B,Equal Opportunity Participation,Conditional,LEAs may not use Title III-A to meet civil rights obligation to ensure meaningful EL participation in curriculum/activities
+Title V-B,EL Student Segregation,Conditional,LEAs may not use Title III-A to meet civil rights obligation to avoid unnecessary segregation
+Title V-B,IDEA Services,Conditional,LEAs may not use Title III-A to meet obligation for EL students with disabilities
+Title V-B,Well-Rounded Education Activities,Allowable,"STEM, arts, foreign language, civics, health, physical education, environmental education"
+Title V-B,Safe & Healthy Students Activities,Allowable,"Trauma-informed practices, mental health services, PBIS, MTSS, suicide prevention, bullying prevention"
+Title V-B,Effective Technology Use,Allowable,"Blended learning, course delivery via technology, professional development for STEM/technology, devices/equipment for instruction"
+Title V-B,School Counselor,Allowable,School-based mental health and academic support
+Title V-B,School Resource Officer,Allowable,Support for safe school environment
+Title V-B,Dropout Prevention,Allowable,
+Title V-B,Assessment Fees,Allowable,Testing and evaluation for well-rounded education purposes
+Title V-B,Salaries - Supplemental Staff,Allowable,Staff supporting Title IV-A activities
+Title V-B,Professional Development,Allowable,Training for staff implementing Title IV-A activities
+Title V-B,Instructional Materials,Allowable,Curriculum and materials for well-rounded education
+Title V-B,Equipment & Technology,Allowable,"Devices, software, platforms supporting Title IV-A activities"
+Title V-B,Expenses Not Serving Purpose,Not Allowable,
+Title V-B,Supplemental Required,Conditional,"Must not be required by federal, state, or local law and not funded by state/local the prior year"
+Title V-B,Funding Obligations,Conditional,"Districts with $30K+: minimum 20% for well-rounded education, 20% for safe/healthy students, portion for effective technology (at least some for STEM-focused)"
+Title V-B,Professional Development - Staff,Allowable,Training school personnel on parent engagement strategies
+Title V-B,Programs - Outreach to Parents,Allowable,"Activities reaching parents/families at home, community, school"
+Title V-B,Best Practices - Dissemination,Allowable,"Information on evidence-based parent engagement, especially for disadvantaged families"
+Title V-B,Community Organization Contracts,Allowable,"Nonprofits can provide engagement activities, professional development for staff, workshops/training for parents, collaboration on engagement strategies, outreach to seniors, technology training"
+Title V-B,Home Visits,Allowable,"Pay staff (teachers, paraprofessionals, administrators) to conduct home visits"
+Title V-B,Technology Support,Allowable,Help families with technological support and communication
+Title V-B,Translation & Interpretation,Allowable,Language support for family engagement
+Title V-B,Communication Apps,Allowable,Apps for school-family communication
+Title V-B,Family Engagement Curriculum,Allowable,"Develop curriculum for parent conferences, engagement planning"
+Title V-B,Grandparent Technology Training,Allowable,Training for grandparents on technology for school engagement
+Title V-B,Make & Take Kits,Allowable,Purchase and assemble materials for families to take home and use with students
+Title V-B,Family Nights With Substance,Allowable,Family engagement events with meaningful content; light refreshments allowable per food guidance
+Title V-B,Achievement Improvement Training,Allowable,Training helping families work with students on achievement
+Title V-B,Targeted Workshops,Allowable,"Workshops for specific family situations (mothers-daughters, grandparents, single parents, etc.)"
+Title V-B,Focus Groups & Surveys,Allowable,"Conduct focus groups, develop surveys to gather family input"
+Title V-B,Travel/Conference for Parent Leaders,Allowable,"Registration, materials, reasonable expenses for parents attending conferences/trainings"
+Title V-B,Awards Banquet Food,Not Allowable,"Refreshments or meals at awards banquets, celebrations, assemblies"
+Title V-B,Full Meal Provision,Not Allowable,Full meals for parent engagement events (except Title I-C PAC exception)
